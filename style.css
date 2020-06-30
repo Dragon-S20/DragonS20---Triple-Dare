@@ -1,0 +1,511 @@
+:root {
+  --yellow: #eef13f;
+  --orange: hsl(13, 99%, 60%);
+  --green: #80b238;
+  --blue: #80c1d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Header home logo --- */
+body {
+  font-family: Atma, Bangers, sans-serif;
+  background-image: url("img/blue-splash.png");
+  background-color: var(--blue);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+header {
+  min-height: 100vh;
+}
+
+header div {
+  text-align: center;
+}
+
+header h1 {
+  color: var(--orange);
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: Bangers;
+  text-shadow: 2px 2px 0px white;
+}
+
+/* --- Barre de navigation top --- */
+nav {
+  background: rgba(128, 178, 56, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+nav ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  padding: 1.5rem 1rem;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+nav li:last-child {
+  font-weight: bold;
+}
+
+nav li:nth-child(2n) a:hover {
+  transform: scale(1.5) rotate(5deg);
+}
+
+nav li:nth-child(2n + 1) a:hover {
+  transform: scale(1.5) rotate(5deg);
+}
+
+/* --- All Obstacles --- */
+
+.home-main {
+  background-color: var(--orange);
+  margin-top: 0;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.2) 0.125rem 0.3125rem;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+  padding-right: 3rem;
+  margin-right: -2rem;
+}
+
+h2 {
+  font-family: "Bangers", cursive;
+  font-size: 4.375rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.2) 0.125rem 0.3125rem;
+  margin-top: 1.5rem;
+}
+
+.all-obstacles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 24px;
+  margin: 0 250px;
+  gap: 2rem;
+}
+
+@media (min-width: 375px) {
+  .all-obstacles {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .all-obstacles {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin: 0 -1rem 0 0rem;
+    padding: 0 18rem;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .all-obstacles {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 4rem 0 4rem;
+    padding: 0 180px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .all-obstacles {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 4rem 0 4rem;
+    padding: 0 440px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .all-obstacles {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 4rem 0 4rem;
+    padding: 0 751px;
+  }
+}
+.all-obstacles li {
+  background-color: var(--green);
+  border-radius: 30px;
+  font-size: 1.25rem;
+  text-align: center;
+  color: white;
+  padding: 0 48px;
+}
+
+h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.flex ul li:hover {
+  background-color: var(--yellow);
+}
+
+.flex ul li:hover a {
+  color: var(--orange);
+}
+article h2 {
+  text-align: center;
+}
+
+/* --- Ligne du damier home page --- */
+table {
+  margin: 2rem auto;
+  border-spacing: 0;
+}
+
+td {
+  width: 3vmin;
+  height: 3vmin;
+}
+
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even),
+td:nth-child(even) {
+  background-color: var(--yellow);
+}
+
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: var(--orange);
+}
+
+@media (min-width: 768px) {
+  table,
+  tbody,
+  td,
+  tr {
+    margin: 3rem 70px;
+  }
+}
+
+@media (min-width: 1280px) {
+  table,
+  tbody,
+  td,
+  tr {
+    margin: 3rem 275px;
+  }
+}
+
+@media (min-width: 1440px) {
+  table,
+  tbody,
+  td,
+  tr {
+    margin: 3rem 250px;
+  }
+}
+
+@media (min-width: 1920px) {
+  table,
+  tbody,
+  td,
+  tr {
+    margin: 3rem 500px;
+  }
+}
+
+@media (min-width: 2560px) {
+  table,
+  tbody,
+  td,
+  tr {
+    margin: 3rem 820px;
+  }
+}
+
+/* ------ page prizes ------ */
+
+.main-prizes {
+  margin: auto auto;
+  background-color: var(--green);
+}
+
+.h2 {
+  font-family: Bangers;
+  font-size: 4rem;
+  text-align: center;
+
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 5px;
+}
+.h3 {
+  font-family: Atma;
+  font-size: 1.5rem;
+  bottom: 1rem;
+
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 5px;
+  color: white;
+}
+
+.img {
+  height: 20rem;
+  width: 20rem;
+  margin-top: 3rem;
+}
+.prizes-list,
+.li,
+.h3 {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.prizes-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem 1rem;
+  margin: auto auto;
+  padding-bottom: 7rem;
+  max-width: 50rem;
+}
+
+.prizes-list .li {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  height: 25rem;
+  width: 25rem;
+  text-align: center;
+  border: 0.15rem dashed yellow;
+  position: relative;
+}
+
+.prizes-list .li .img,
+.h3 {
+  text-align: center;
+  margin-bottom: -1rem;
+  margin-top: 1rem;
+}
+
+.li:hover .img,
+.li:hover .key,
+.li:hover .skate {
+  transform: rotate(360deg) scale(1.05);
+  transition: 0.6s;
+}
+
+.key,
+.skate {
+  width: 25rem;
+  height: 10rem;
+  margin-top: 3rem;
+}
+
+.all-obstacles li {
+  background-color: var(--green);
+  border-radius: 30px;
+  font-size: 1.25rem;
+  text-align: center;
+  color: white;
+  padding: 0 48px;
+}
+
+h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.flex ul li:hover {
+  background-color: var(--yellow);
+}
+
+.flex ul li:hover a {
+  color: var(--orange);
+}
+article h2 {
+  text-align: center;
+}
+
+/* ---------- footer ---------- */
+footer {
+  background-color: var(--yellow);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 0;
+  padding: 24px;
+  position: relative;
+}
+
+.flex-foot {
+  display: block;
+}
+.logo {
+  position: static;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -80%);
+}
+.foot-p {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column: 1 / span 3;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 15.62rem;
+}
+
+.foot-h2 {
+  font-family: "Bangers", cursive;
+  font-size: 3.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 5px;
+  margin-top: 1.5rem;
+}
+
+.p1 {
+  text-align: right;
+}
+
+.p2 {
+  text-align: left;
+}
+*/
+/* -------------- CODE CSS PAGE APPLY ----------------- */
+
+.apply-main {
+  background: var(--blue);
+  margin: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* ^_^ Titre : APPLY ^_^ */
+
+.apply-title {
+  text-align: center;
+  font-family: Bangers;
+  color: #fff;
+  font-size: 4.06rem;
+  letter-spacing: 0.15rem;
+  text-shadow: rgba(0, 0, 0, 0.3) 0.25rem 0.25rem;
+  margin: 0;
+}
+
+/* ^_^ Formulaire ^_^ */
+
+form {
+  max-width: 50vw;
+  margin: auto;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 2rem;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+input {
+  background: var(--orange);
+  font-size: 1.5rem;
+  font-family: Atma;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+}
+
+input:focus {
+  background: var(--yellow);
+  color: var(--orange);
+}
+
+::placeholder {
+  color: #fff;
+}
+
+/* ^_^ Bouton de validation ^_^ */
+
+.submit-apply {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.submit-apply button {
+  background: none;
+  background-image: url(/img/submit_bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 8.75rem 7.81rem;
+  padding: 3.43rem 2.188rem;
+  border: 0;
+  font-size: 1.58rem;
+  font-family: Bangers;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.3) 0.125rem 0.25rem;
+  transform: rotate(-5deg);
+  transition: 0.5s;
+}
+
+.submit-apply button:hover {
+  transform: scale(1.5) rotate(0deg);
+}
+
+/* ^_^ Ligne de damier page apply ^_^ */
+
+.apply-chess {
+  margin: 2rem auto;
+  border-spacing: 0;
+}
+
+.apply-chess td {
+  width: 3vmin;
+  height: 3vmin;
+}
+
+.apply-chess tr:nth-child(odd) td:nth-child(odd),
+.apply-chess tr:nth-child(even),
+td:nth-child(even) {
+  background-color: var(--yellow);
+}
+
+.apply-chess tr:nth-child(odd) td:nth-child(even),
+.apply-chess tr:nth-child(even) td:nth-child(odd) {
+  background-color: var(--blue);
+}
+
+/*~~~~~~~ CODE CSS PAGE APPLY ~~~~~~~*/
